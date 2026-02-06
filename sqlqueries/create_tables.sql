@@ -6,6 +6,7 @@ mysql> CREATE TABLE clients (
     ->     region VARCHAR(50) NOT NULL
     -> );
 Query OK, 0 rows affected (1.30 sec)
+    
 
 mysql> -- 2. Create routes table(28966)
 mysql> CREATE TABLE routes (
@@ -27,4 +28,5 @@ mysql> CREATE TABLE shipments (
     ->     FOREIGN KEY (client_id) REFERENCES clients(client_id),
     ->     FOREIGN KEY (route_id) REFERENCES routes(route_id)
     -> );
+
 Query OK, 0 rows affected (1.10 sec)
