@@ -4,6 +4,7 @@
 **Instructor:** Eric Maniraguha  
 **Student:** Gisagara Dave Toussaint  
 **Student ID:** 28966  
+**DATABASE USED: MySQL
 
 ---
 
