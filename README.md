@@ -1,4 +1,4 @@
-## PL/SQL Window Functions Assignment
+## PL/SQL Window Functions Assignment And SQL JOINS
 
 **Course:** Database Development with PL/SQL (INSY 8311)  
 **Instructor:** Eric Maniraguha  
