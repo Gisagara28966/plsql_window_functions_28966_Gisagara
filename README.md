@@ -52,7 +52,7 @@ Records shipment transactions and links clients and routes.
 | Routes    | route_id    | -                                                |
 | Shipments | shipment_id | client_id → clients(client_id), route_id → routes(route_id) |
 
-**ER Diagram here**
+![screenshot](ER Diagram/eer diagram.png)
 
 ---
 
