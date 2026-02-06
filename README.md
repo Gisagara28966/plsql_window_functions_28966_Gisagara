@@ -61,27 +61,31 @@ Records shipment transactions and links clients and routes.
 ## Step 4: Part A — SQL Joins Implementation
 
 ### 1. INNER JOIN
-**Screenshot here**  
+![innerjoi](screenshots/inner_join.PNG)  
 **Business interpretation:**  
 This query shows all shipments where both the client and the route exist in the system. It highlights active shipments and ensures that only valid transactions are analyzed. Most shipments are concentrated among Kigali-origin routes, reflecting central hub activity.
 
 ### 2. LEFT JOIN
-**Screenshot here**  
+![leftjoi](screenshots/left_join.PNG)
+
 **Business interpretation:**  
 This highlights inactive clients who haven't made any shipments yet. It helps management find accounts that need follow-ups or rewards to get them started.
 
 ### 3. RIGHT JOIN
-**Screenshot here**  
+![rightjoi](screenshots/right_join.PNG)
+
 **Business interpretation:**  
 This identifies routes with little to no activity, such as long-distance paths without scheduled shipments. It helps management decide whether to promote these routes or remove them to save costs.
 
 ### 4. FULL OUTER JOIN (using MySQL it is simulated with LEFT JOIN + RIGHT JOIN with UNION)
-**Screenshot here**  
+![fullouterjoi](screenshots/full_outer_join.PNG)
+  
 **Business interpretation:**  
 This report shows all clients and routes, even those without any activity. It helps management identify where to re-engage customers or improve route schedules.
 
 ### 5. SELF JOIN
-**Screenshot here**  
+![selfjoi](screenshots/self_join.PNG)
+ 
 **Business interpretation:**  
 This report groups clients by region to find opportunities for combined shipping. It helps management consolidate routes or plan regional promotions more efficiently.
 
@@ -92,7 +96,8 @@ This report groups clients by region to find opportunities for combined shipping
 ### 1. Ranking Functions
 **Functions required:** `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `PERCENT_RANK()`  
 **Use case:** Top clients by total shipment cost  
-**Screenshot here**  
+![ranking](screenshots/ranking_functions.PNG)
+  
 **Business Meaning:**  
 This ranks clients by their total spending to identify your most valuable customers. It helps management see the performance gap between top-tier accounts and the rest of the list.
 
@@ -100,21 +105,24 @@ This ranks clients by their total spending to identify your most valuable custom
 **Functions required:** `SUM() OVER()`, `AVG() OVER()`  
 **Frames:** ROWS  
 **Use case:** Running total of shipment costs over time  
-**Screenshot here**  
+![agg](screenshots/aggregate_functions.PNG)
+ 
 **Business Meaning:**  
 The running total tracks total logistics costs over time, while the moving average hides small spikes to show the real trend. This makes it easier for management to monitor spending and predict future costs.
 
 ### 3. Navigation Functions
 **Functions:** `LAG()`, `LEAD()`  
 **Use case:** Compare shipment cost changes over time  
-**Screenshot here**  
+![nav](screenshots/navigation_functions.PNG)
+ 
 **Business Meaning:**  
 This analysis compares each shipment’s cost to the ones before and after it to spot any changes. It helps management identify unusual price spikes or areas where money is being wasted.
 
 ### 4. Distribution Functions
 **Functions:** `NTILE(4)`, `CUME_DIST()`  
 **Use case:** Client segmentation by shipment spending  
-**Screenshot here**  
+![dist](screenshots/distribution_functions.PNG)
+ 
 **Business Meaning:**  
 This analysis divides clients into four equal groups based on how much they spend. It allows management to customize pricing, rewards, and service levels for each specific group.
 
